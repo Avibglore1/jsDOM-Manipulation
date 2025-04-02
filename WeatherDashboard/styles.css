@@ -1,0 +1,362 @@
+
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #f8f9fa;
+            --dark-color: #202124;
+            --light-color: #ffffff;
+            --accent-color: #fbbc04;
+            --danger-color: #ea4335;
+            --success-color: #34a853;
+            --border-radius: 12px;
+            --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo i {
+            font-size: 28px;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 10px;
+            width: 350px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #dfe1e5;
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+        }
+
+        .search-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 0 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #0d61cb;
+        }
+
+        .location-btn {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            border: 1px solid #dfe1e5;
+            border-radius: var(--border-radius);
+            width: 48px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .location-btn:hover {
+            background-color: #e8eaed;
+        }
+
+        .unit-toggle {
+            background-color: var(--secondary-color);
+            border-radius: 30px;
+            display: inline-flex;
+            padding: 5px;
+            margin-left: 20px;
+        }
+
+        .unit-toggle button {
+            background: none;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .unit-toggle button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+
+        .current-weather {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            height: 100%;
+        }
+
+        .current-weather-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .location {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .date-time {
+            color: #70757a;
+            font-size: 14px;
+        }
+
+        .current-weather-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .temperature {
+            font-size: 72px;
+            font-weight: 300;
+            line-height: 1;
+            margin: 20px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .temperature span {
+            font-size: 36px;
+            margin-left: 5px;
+        }
+
+        .weather-icon {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .weather-description {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .weather-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--secondary-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+        }
+
+        .detail-label {
+            color: #70757a;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .forecast {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 20px;
+        }
+
+        .hourly-forecast {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+            overflow-x: auto;
+        }
+
+        .forecast-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #5f6368;
+        }
+
+        .hourly-items {
+            display: flex;
+            gap: 30px;
+            padding-bottom: 10px;
+        }
+
+        .hourly-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 80px;
+        }
+
+        .hour {
+            font-size: 14px;
+            color: #70757a;
+            margin-bottom: 10px;
+        }
+
+        .hourly-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hourly-temp {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .daily-forecast {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .daily-items {
+            display: grid;
+            gap: 15px;
+        }
+
+        .daily-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .daily-item:last-child {
+            border-bottom: none;
+        }
+
+        .day {
+            flex: 1;
+            font-weight: bold;
+        }
+
+        .daily-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 15px;
+        }
+
+        .temp-range {
+            display: flex;
+            gap: 10px;
+            width: 150px;
+            justify-content: flex-end;
+        }
+
+        .max-temp {
+            font-weight: bold;
+        }
+
+        .min-temp {
+            color: #70757a;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media screen and (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            .search-container {
+                width: 100%;
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            .unit-toggle {
+                margin-left: 0;
+            }
+        }
+    

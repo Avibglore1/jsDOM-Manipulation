@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-cloud-sun"></i>
+                <span>WeatherNow</span>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search city...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <button class="location-btn" title="Use current location"><i class="fas fa-map-marker-alt"></i></button>
+                <div class="unit-toggle">
+                    <button class="unit-c active">°C</button>
+                    <button class="unit-f">°F</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <div class="current-weather">
+                <div class="current-weather-header">
+                    <div>
+                        <div class="location">New York, US</div>
+                        <div class="date-time">Wednesday, 2 Apr 2025 | 10:30 AM</div>
+                    </div>
+                    <div class="refresh-btn">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                </div>
+                <div class="current-weather-body">
+                    <img src="/api/placeholder/100/100" alt="Weather Icon" class="weather-icon">
+                    <div class="temperature">18<span>°C</span></div>
+                    <div class="weather-description">Partly Cloudy</div>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Feels Like</div>
+                            <div class="detail-value">16°C</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Wind</div>
+                            <div class="detail-value">10 km/h</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Humidity</div>
+                            <div class="detail-value">65%</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">UV Index</div>
+                            <div class="detail-value">3 of 10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <div class="hourly-forecast">
+                    <div class="forecast-title">Hourly Forecast</div>
+                    <div class="hourly-items">
+                        <div class="hourly-item">
+                            <div class="hour">Now</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">18°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hour">11:00</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">19°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hour">12:00</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">20°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hour">13:00</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">21°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hour">14:00</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">21°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hour">15:00</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">20°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hour">16:00</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">19°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hour">17:00</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">18°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hour">18:00</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">16°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hour">19:00</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">15°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hour">20:00</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">14°</div>
+                        </div>
+                        <div class="hourly-item">
+                            <div class="hour">21:00</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="hourly-icon">
+                            <div class="hourly-temp">13°</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="daily-forecast">
+                    <div class="forecast-title">7-Day Forecast</div>
+                    <div class="daily-items">
+                        <div class="daily-item">
+                            <div class="day">Today</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="daily-icon">
+                            <div class="temp-range">
+                                <div class="max-temp">21°</div>
+                                <div class="min-temp">13°</div>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="day">Thu</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="daily-icon">
+                            <div class="temp-range">
+                                <div class="max-temp">23°</div>
+                                <div class="min-temp">14°</div>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="day">Fri</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="daily-icon">
+                            <div class="temp-range">
+                                <div class="max-temp">22°</div>
+                                <div class="min-temp">15°</div>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="day">Sat</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="daily-icon">
+                            <div class="temp-range">
+                                <div class="max-temp">19°</div>
+                                <div class="min-temp">12°</div>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="day">Sun</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="daily-icon">
+                            <div class="temp-range">
+                                <div class="max-temp">18°</div>
+                                <div class="min-temp">11°</div>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="day">Mon</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="daily-icon">
+                            <div class="temp-range">
+                                <div class="max-temp">20°</div>
+                                <div class="min-temp">13°</div>
+                            </div>
+                        </div>
+                        <div class="daily-item">
+                            <div class="day">Tue</div>
+                            <img src="/api/placeholder/40/40" alt="Weather Icon" class="daily-icon">
+                            <div class="temp-range">
+                                <div class="max-temp">22°</div>
+                                <div class="min-temp">14°</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="api.js"></script>
+</body>
+</html>
