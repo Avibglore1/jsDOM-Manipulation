@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="font-mono bg-gray-200 mt-3 p-3 ml-auto mr-auto">
+    <header class=" flex flex-row justify-between mb-4">
+        <div class="flex gap-2 items-center"> 
+            <i class="fa-solid fa-cloud-bolt text-blue-600 text-4xl" ></i>
+            <span class="text-4xl text-blue-600 font-bold">WeatherNow</span>
+        </div>
+        <div class="flex gap-3 items-center">
+            <input type="text" name="" id="" placeholder="Search city ..."
+            class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <div class="bg-blue-500 p-2 rounded-md">
+                <i class="fa-solid fa-magnifying-glass text-xl"></i>
+            </div>
+            <div class="bg-blue-500 p-2 rounded-md">
+                <i class="fa-solid fa-location-pin text-xl "></i>
+            </div>
+            <div class="temp-toggle">
+                <div class="toggle-option active" id="celsius">°C</div>
+                <div class="toggle-option" id="fahrenheit">°F</div>
+            </div>
+        </div>
+    </header>
+    <div class="flex flex-row-reverse">
+        <div class="space-y-4 w-[50%] ml-auto">
+            <div class="hourly rounded-md bg-white shadow-md p-2 " id="">
+                <h2 class="text-xl">Hourly Forecast</h2>
+                <div class="p-1 flex flex-row justify-evenly" id="cardContainer"></div>
+            </div>
+            <div class="seven-day rounded-md bg-white shadow-md p-2 ">
+                <h2 class="text-xl">7-Day Forecast</h2>
+                <div class="p-3  justify-center" id="weekContainer"></div>
+            </div>
+        </div>
+        <div class="exact-location rounded-md bg-white shadow-md p-5 w-[45%] flex flex-col items-center justify-evenly">
+            <div class="mb-14">
+                <h2 class="font-bold text-4xl">Indore, MP</h2>
+                <p class="text-gray-400 font-bold">Thursday Apr 3, 2025, 02:36 PM</p>
+                <img src="" alt="">
+            </div>
+            <div class="text-center">
+                <p class="font-bold relative">
+                    <span class="text-7xl">18</span>
+                    <span class="absolute top-0 right-0 transform -translate-y-1 translate-x-4 text-2xl">°C</span>
+                </p>
+                <p class="text-xl">Partly Cloudy</p>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+    <script src="api.js"></script>
+</body>
+</html>
